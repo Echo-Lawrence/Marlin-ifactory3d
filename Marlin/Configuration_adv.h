@@ -812,9 +812,9 @@
 // Steppers will shut down DEFAULT_STEPPER_DEACTIVE_TIME seconds after the last move when DISABLE_INACTIVE_? is true.
 // Time can be set by M18 and M84.
 #define DEFAULT_STEPPER_DEACTIVE_TIME 120
-#define DISABLE_INACTIVE_X true   // dima, 28-12-2020, set to false, position of nozzle is intact and doesn't go down,  false doesn't seem to work 11,01,2021
-#define DISABLE_INACTIVE_Y true // dima, 28-12-2020, set to false, position of nozzle is intact and doesn't go down
-#define DISABLE_INACTIVE_Z true  // Set to false if the nozzle will fall down on your printed part when print has finished.
+#define DISABLE_INACTIVE_X false   // dima, 28-12-2020, set to false, position of nozzle is intact and doesn't go down,  false doesn't seem to work 11,01,2021
+#define DISABLE_INACTIVE_Y false // dima, 28-12-2020, set to false, position of nozzle is intact and doesn't go down
+#define DISABLE_INACTIVE_Z false  // Set to false if the nozzle will fall down on your printed part when print has finished.
 #define DISABLE_INACTIVE_E true
 
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
@@ -1116,7 +1116,7 @@
 
   #define SD_PROCEDURE_DEPTH 1              // Increase if you need more nested M32 calls
 
-  #define SD_FINISHED_STEPPERRELEASE true   // Disable steppers when SD Print is finished
+  #define SD_FINISHED_STEPPERRELEASE false   // Disable steppers when SD Print is finished
   #define SD_FINISHED_RELEASECOMMAND "M84"  // Use "M84XYE" to keep Z enabled so your bed stays in place
 
   // Reverse SD sort to show "more recent" files first, according to the card's FAT.
